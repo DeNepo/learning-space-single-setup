@@ -1,18 +1,18 @@
-name: Lint
+name: Test
 on: [push, pull_request]
 jobs:
-  lint:
-    name: Lint
+  test:
+    name: Run some Tests
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Python 3.7
+      - name: Set up Python 3.8
         uses: actions/setup-python@v1
         with:
-          python-version: "3.7"
+          python-version: "3.8"
 
       - uses: actions/checkout@v1
 
-      - name: Lint
+      - name: Test
+        # this currently does nothing, but we can add some tests later
         run: |
-          pip install flake8
-          flake8 main.py
+          python -m unittest

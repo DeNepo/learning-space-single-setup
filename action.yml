@@ -1,13 +1,13 @@
-name: "Python Container Action Template"
-description: "Get started with Python Container actions"
-author: "Jacob Tomlinson"
+name: "Set up a learning space based on a yaml template"
+description: "Run the single-user action to set up your learning space based on the micromaterials that are present in your template"
+author: "lpmi-13"
 inputs:
-  myInput:
-    description: "Input to use"
-    default: "world"
-outputs:
-  myOutput:
-    description: "Output from the action"
+  path:
+    description: "The path to the yaml configuration template. This can be a file or a URL available on a network (eg. https://github.com/lpmi-13/learning-space-templates/.learning/example.yml)"
+    required: true
 runs:
   using: "docker"
   image: "Dockerfile"
+branding:
+  icon: 'book-open'
+  color: 'green'
