@@ -48,3 +48,5 @@ The local file can be anywhere in the project folder structure, but a good place
 with:
   path: ./learning/materials.yml
 ```
+
+An example of the configuration file format can be found [here](https://github.com/learning-as-code/learning-space-template/blob/main/.learning/materials.yml)
